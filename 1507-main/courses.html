@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quản lý Khóa học - LMS Uni</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fas fa-graduation-cap"></i>
+      <h1>LMS Uni</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm khóa học..." />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="user-actions">
+      <button class="notification-btn"><i class="fas fa-bell"></i><span class="badge">2</span></button>
+      <div class="user-profile"><i class="fas fa-user"></i></div>
+      <button class="settings-btn"><i class="fas fa-cog"></i></button>
+    </div>
+  </header>
+
+  <nav class="horizontal-nav">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="HTML.HTML"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li class="student-only parent-only"><a href="my-courses.html"><i class="fas fa-book"></i> Khóa học của tôi</a></li>
+        <li class="student-only teacher-only parent-only"><a href="schedule.html"><i class="fas fa-calendar-alt"></i> Lịch học</a></li>
+        <li class="student-only teacher-only"><a href="assignment.html"><i class="fas fa-tasks"></i> Bài tập</a></li>
+        <li class="student-only teacher-only"><a href="quizzes.html"><i class="fas fa-clipboard-check"></i> Bài kiểm tra</a></li>
+        <li class="student-only parent-only"><a href="reports.html"><i class="fas fa-chart-bar"></i> Báo cáo học tập</a></li>
+        <li><a href="discussion.html"><i class="fas fa-comments"></i> Thảo luận</a></li>
+        <li class="admin-only"><a href="admin_users.html"><i class="fas fa-users-cog"></i> Quản lý người dùng</a></li>
+        <li class="admin-only teacher-only active"><a href="courses.html"><i class="fas fa-graduation-cap"></i> Quản lý khóa học</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <main class="main-content">
+      <h2 style="font-size: 2.2rem; margin-bottom: 24px;">Quản lý Khóa học</h2>
+
+      <!-- Bộ lọc & nút thêm -->
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <input type="text" placeholder="Tìm kiếm theo tên hoặc mã..." style="padding: 10px; border-radius: 8px; border: 1px solid #ddd; width: 280px;">
+        <button class="btn" style="background-color: var(--primary); color: white; padding: 10px 20px; border-radius: 8px;">
+          <i class="fas fa-plus-circle"></i> Thêm khóa học
+        </button>
+      </div>
+
+      <!-- Danh sách khóa học -->
+      <table class="users-table">
+        <thead>
+          <tr>
+            <th>Mã khóa</th>
+            <th>Tên khóa học</th>
+            <th>Giảng viên</th>
+            <th>Thời lượng</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CS101</td>
+            <td>Nhập môn Lập trình</td>
+            <td>Thầy An</td>
+            <td>30 giờ</td>
+            <td>
+              <button class="btn-edit"><i class="fas fa-edit"></i></button>
+              <button class="btn-delete"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>PHY201</td>
+            <td>Vật lý Đại cương</td>
+            <td>Thầy Nam</td>
+            <td>25 giờ</td>
+            <td>
+              <button class="btn-edit"><i class="fas fa-edit"></i></button>
+              <button class="btn-delete"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
